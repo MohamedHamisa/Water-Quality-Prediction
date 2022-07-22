@@ -362,7 +362,11 @@ sns.heatmap(confusion_matrix(y_test,pred1),annot=True,cbar=False)
 plt.legend()
 plt.show()
 
-#SVM
+#SVM  
+#plot each data item as a point in n-dimensional space 
+#(where n is a number of features you have) with the value of each feature being the value of a particular coordinate
+#what exactly is the best hyperplane? For SVM, it’s the one that maximizes the margins from both tags(to be in the middle).
+#In other words: the hyperplane (remember it's a line in this case) whose distance to the nearest element of each tag is the largest.
 from sklearn import svm
 from sklearn.metrics import accuracy_score
 svmc = svm.SVC()
